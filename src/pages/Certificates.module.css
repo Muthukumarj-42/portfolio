@@ -54,3 +54,42 @@
   font-size: 0.9rem;
   margin-top: 4px;
 }
+/* Fullscreen container */
+.fullScreenWrapper {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Fullscreen image */
+.fullScreenImage {
+  max-width: 95%;
+  max-height: 95%;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00eaff;
+}
+
+/* Close button */
+.closeBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 22px;
+  padding: 10px 15px;
+  background: #00eaff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #000;
+  font-weight: 700;
+  z-index: 10000;
+}
+
+.closeBtn:hover {
+  background: white;
+}
