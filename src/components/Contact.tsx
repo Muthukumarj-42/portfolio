@@ -13,21 +13,47 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbz7hhD_jQnt6wWuM3wl5cKSWfZiD3WRkAXnNnl3xlcgl1PFMEFplfBEdndlay7eUIY9/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, email, message }),
+        }
+      );
+
+      setStatus("Message Sent Successfully!");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch {
+      setStatus("Error sending message.");
+    }
+  };
 
   return (
     <section id="contact" className={styles.section}>
       <h2 className={styles.title}>Get In Touch</h2>
-      <div className={styles.line} />
+      <div className={styles.line}></div>
 
       <div className={styles.wrapper}>
-        {/* LEFT FORM */}
-        <form className={styles.form}>
+        {/* --- LEFT FORM --- */}
+        <form onSubmit={handleSubmit} className={styles.form}>
           <input
             type="text"
             placeholder="Your Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             className={styles.input}
+            required
           />
 
           <input
@@ -36,6 +62,7 @@ export default function Contact() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className={styles.input}
+            required
           />
 
           <textarea
@@ -43,12 +70,17 @@ export default function Contact() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             className={styles.textarea}
+            required
           />
 
-          <button className={styles.sendBtn}>Send Message</button>
+          <button type="submit" className={styles.sendBtn}>
+            Send Message
+          </button>
+
+          <p className={styles.status}>{status}</p>
         </form>
 
-        {/* RIGHT INFO */}
+        {/* --- RIGHT INFORMATION BOX --- */}
         <div className={styles.infoBox}>
           <h3>Contact Information</h3>
 
@@ -65,7 +97,10 @@ export default function Contact() {
           <h3 className={styles.connectTitle}>Connect With Me</h3>
 
           <div className={styles.icons}>
-            <a href="https://linkedin.com" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/muthu-kumar-j42/"
+              target="_blank"
+            >
               <FaLinkedin />
             </a>
             <a href="https://github.com/Muthukumarj-42" target="_blank">
