@@ -12,21 +12,27 @@ export default function Contact() {
     setStatus("Sending...");
 
     try {
-      const res = await fetch(
+      await fetch(
         "https://script.google.com/macros/s/AKfycbz7hhD_jQnt6wWuM3wl5cKSWfZiD3WRkAXnNnl3xlcgl1PFMEFplfBEdndlay7eUIY9/exec",
         {
           method: "POST",
           mode: "no-cors",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email, message }),
+          body: JSON.stringify({
+            name: name, // ❗ NO `.value`
+            email: email, // ❗ NO `.value`
+            message: message, // ❗ NO `.value`
+          }),
         }
       );
 
       setStatus("Message Sent Successfully!");
+
+      // Reset fields
       setName("");
       setEmail("");
       setMessage("");
-    } catch (err) {
+    } catch {
       setStatus("Error sending message.");
     }
   };
@@ -35,32 +41,32 @@ export default function Contact() {
     <section id="contact" className={styles.contactSection}>
       <h2 className={styles.title}>Get In Touch</h2>
 
-      <form className={styles.form} onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className={styles.form}>
         <input
           type="text"
-          placeholder="Name"
           className={styles.input}
+          placeholder="Your Name"
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => setName(e.target.value)} // correct
           required
         />
 
         <input
           type="email"
-          placeholder="Email"
           className={styles.input}
+          placeholder="Your Email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)} // correct
           required
         />
 
         <textarea
-          placeholder="Message"
           className={styles.textarea}
+          placeholder="Your Message"
           value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          onChange={(e) => setMessage(e.target.value)} // correct
           required
-        ></textarea>
+        />
 
         <button type="submit" className={styles.btn}>
           Send Message
