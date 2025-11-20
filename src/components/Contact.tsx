@@ -1,7 +1,13 @@
 import { useState } from "react";
 import styles from "./Contact.module.css";
-import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
-import { FaLinkedin, FaGithub, FaCode } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaLinkedin,
+  FaGithub,
+  FaCode,
+} from "react-icons/fa";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -38,12 +44,12 @@ export default function Contact() {
       <h2 className={styles.title}>Get In Touch</h2>
 
       <div className={styles.container}>
-        {/* Form Section */}
+        {/* Left Side - Form */}
         <form onSubmit={handleSubmit} className={styles.form}>
           <input
             type="text"
-            className={styles.input}
             placeholder="Your Name"
+            className={styles.input}
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
@@ -51,57 +57,52 @@ export default function Contact() {
 
           <input
             type="email"
-            className={styles.input}
             placeholder="Your Email"
+            className={styles.input}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
 
           <textarea
-            className={styles.textarea}
             placeholder="Your Message"
+            className={styles.textarea}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
           />
 
-          <button type="submit" className={styles.btn}>
+          <button type="submit" className={styles.sendBtn}>
             Send Message
           </button>
 
           <p className={styles.status}>{status}</p>
         </form>
 
-        {/* Contact Information */}
+        {/* Right Side - Contact info */}
         <div className={styles.infoBox}>
-          <h3 className={styles.infoTitle}>Contact Information</h3>
+          <h3>Contact Information</h3>
 
-          <p className={styles.infoItem}>
-            <FiMail /> muthukumarj.ec24@bitsathy.ac.in
+          <p>
+            <FaEnvelope /> muthukumarj.ec24@bitsathy.ac.in
+          </p>
+          <p>
+            <FaPhone /> 7305514999
+          </p>
+          <p>
+            <FaMapMarkerAlt /> Perumanallur, Tiruppur
           </p>
 
-          <p className={styles.infoItem}>
-            <FiPhone /> 7305514999
-          </p>
+          <h3 className={styles.connectTitle}>Connect With Me</h3>
 
-          <p className={styles.infoItem}>
-            <FiMapPin /> Perumanallur, Tiruppur
-          </p>
-
-          <h3 className={styles.infoTitle}>Connect With Me</h3>
-
-          <div className={styles.socials}>
-            <a
-              href="https://www.linkedin.com/in/muthu-kumar-j42/"
-              target="_blank"
-            >
+          <div className={styles.icons}>
+            <a href="https://linkedin.com" target="_blank">
               <FaLinkedin />
             </a>
             <a href="https://github.com/Muthukumarj-42" target="_blank">
               <FaGithub />
             </a>
-            <a href="https://leetcode.com/u/muthu_code/" target="_blank">
+            <a href="#">
               <FaCode />
             </a>
           </div>

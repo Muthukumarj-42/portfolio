@@ -1,159 +1,130 @@
 .contactSection {
   padding: 80px 20px;
-  text-align: center;
   color: white;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .title {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--primary);
   margin-bottom: 40px;
-  color: #00eaff;
 }
 
 .container {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
   max-width: 1100px;
   margin: auto;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 
-/* Form Box */
-.formCard {
+/* FORM */
+.form {
   flex: 1;
   min-width: 350px;
-  background: #0d1721;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.form label {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 1rem;
-  text-align: left;
-}
-
-.form input,
-.form textarea {
-  width: 100%;
-  padding: 12px;
+.input,
+.textarea {
+  background: transparent;
+  border: 2px solid var(--primary);
   border-radius: 8px;
-  border: 2px solid #0288a6;
-  background: #081218;
+  padding: 15px;
   color: white;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
 }
 
-/* Button */
-.button {
-  width: 100%;
+.input:focus,
+.textarea:focus {
+  box-shadow: 0 0 12px var(--primary);
+  transform: scale(1.02);
+}
+
+.textarea {
+  resize: none;
+  height: 120px;
+}
+
+.sendBtn {
+  background: var(--primary);
+  color: black;
   padding: 14px;
-  background: #00eaff;
-  color: #000;
-  font-weight: bold;
-  border: none;
+  font-size: 1.1rem;
   border-radius: 8px;
+  border: none;
+  font-weight: 700;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.button:hover {
-  background: #00bcd4;
+.sendBtn:hover {
+  background: #00faff;
+  box-shadow: 0 0 15px #00faff;
+  transform: translateY(-4px);
 }
 
 .status {
   margin-top: 10px;
-  font-size: 1rem;
-  color: #00eaff;
+  color: var(--primary);
 }
 
-/* Contact Info Box */
-.infoCard {
+/* INFO BOX */
+.infoBox {
   flex: 1;
-  min-width: 350px;
-  background: #0d1721;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.1);
+  min-width: 300px;
   text-align: left;
+  font-size: 1.1rem;
 }
 
-.infoCard h3 {
-  font-size: 1.5rem;
-  color: #00eaff;
+.infoBox h3 {
   margin-bottom: 15px;
+  color: var(--primary);
 }
 
-.infoCard p {
+.infoBox p {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 12px;
-  font-size: 1rem;
+  opacity: 0.9;
 }
 
-.socialIcons {
+.connectTitle {
+  margin-top: 25px;
+}
+
+.icons {
   display: flex;
   gap: 20px;
-  margin-top: 15px;
+  font-size: 1.9rem;
 }
 
-.socialIcons a {
-  font-size: 1.8rem;
-  color: #00eaff;
+.icons a {
+  color: white;
   transition: 0.3s;
 }
 
-.socialIcons a:hover {
-  transform: scale(1.2);
-  color: #00bcd4;
-}
-.container {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  margin-top: 40px;
-  flex-wrap: wrap;
-}
-
-.infoBox {
-  color: white;
-  max-width: 350px;
-}
-
-.infoTitle {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
+.icons a:hover {
   color: var(--primary);
-}
-
-.infoItem {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-  font-size: 1rem;
-  color: var(--text-light);
-}
-
-.socials {
-  display: flex;
-  gap: 20px;
-  margin-top: 10px;
-}
-
-.socials a {
-  font-size: 1.8rem;
-  color: var(--primary);
-  transition: 0.3s ease;
-}
-
-.socials a:hover {
-  color: white;
   transform: scale(1.2);
 }
