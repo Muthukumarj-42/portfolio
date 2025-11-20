@@ -47,7 +47,7 @@ export default function Contact() {
           className={styles.input}
           placeholder="Your Name"
           value={name}
-          onChange={(e) => setName(e.target.value)} // correct
+          onChange={(e) => setName(e.target)} // correct
           required
         />
 
@@ -56,7 +56,7 @@ export default function Contact() {
           className={styles.input}
           placeholder="Your Email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)} // correct
+          onChange={(e) => setEmail(e.target)} // correct
           required
         />
 
@@ -64,7 +64,7 @@ export default function Contact() {
           className={styles.textarea}
           placeholder="Your Message"
           value={message}
-          onChange={(e) => setMessage(e.target.value)} // correct
+          onChange={(e) => setMessage(e.target)} // correct
           required
         />
 
