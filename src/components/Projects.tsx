@@ -14,37 +14,50 @@ export default function Projects() {
   return (
     <section id="projects" className={styles.section}>
       <h2 className={styles.title}>My Projects</h2>
+      <div className={styles.line} />
 
-      {/* Toggle */}
-      <div className={styles.toggle}>
-        <button
-          className={category === "electronics" ? styles.active : ""}
-          onClick={() => setCategory("electronics")}
-        >
-          Electronics
-        </button>
-        <button
-          className={category === "design" ? styles.active : ""}
-          onClick={() => setCategory("design")}
-        >
-          Design
-        </button>
+      {/* CENTERED TOGGLE */}
+      <div className={styles.toggleWrap}>
+        <div className={styles.toggle}>
+          <button
+            className={`${styles.toggleBtn} ${
+              category === "electronics" ? styles.active : ""
+            }`}
+            onClick={() => setCategory("electronics")}
+          >
+            Electronics
+          </button>
+          <button
+            className={`${styles.toggleBtn} ${
+              category === "design" ? styles.active : ""
+            }`}
+            onClick={() => setCategory("design")}
+          >
+            Design
+          </button>
+        </div>
       </div>
 
-      {/* Project Grid */}
+      {/* GRID */}
       <div className={styles.grid}>
-        {filtered.map((project) => (
+        {filtered.map((p) => (
           <div
-            key={project.id}
+            key={p.id}
             className={styles.card}
-            onClick={() =>
-              project.type === "internal"
-                ? setOpenProject(project)
-                : window.open(project.externalLink, "_blank")
-            }
+            onClick={() => setOpenProject(p)}
           >
-            <h3>{project.title}</h3>
-            <p>{project.shortDesc}</p>
+            {p.img && (
+              <img src={p.img} alt={p.title} className={styles.cardImg} />
+            )}
+
+            <h3>{p.title}</h3>
+            <p>{p.shortDesc}</p>
+
+            <div className={styles.tags}>
+              {p.tags.map((t, i) => (
+                <span key={i}>{t}</span>
+              ))}
+            </div>
           </div>
         ))}
       </div>
@@ -56,21 +69,21 @@ export default function Projects() {
           onClick={() => setOpenProject(null)}
         >
           <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-            <h2>{openProject.title}</h2>
-            <p>{openProject.description}</p>
-
-            <div className={styles.tags}>
-              {openProject.tags.map((tag: string, i: number) => (
-                <span key={i}>{tag}</span>
-              ))}
-            </div>
-
             <button
-              className={styles.close}
+              className={styles.closeBtn}
               onClick={() => setOpenProject(null)}
             >
               Close
             </button>
+
+            <h2 className={styles.modalTitle}>{openProject.title}</h2>
+            {openProject.img && (
+              <img src={openProject.img} className={styles.modalImg} />
+            )}
+            <div
+              className={styles.modalContent}
+              dangerouslySetInnerHTML={{ __html: openProject.details }}
+            />
           </div>
         </div>
       )}

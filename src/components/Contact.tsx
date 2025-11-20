@@ -13,73 +13,42 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [status, setStatus] = useState("");
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("Sending...");
-
-    try {
-      await fetch(
-        "https://script.google.com/macros/s/AKfycbz7hhD_jQnt6wWuM3wl5cKSWfZiD3WRkAXnNnl3xlcgl1PFMEFplfBEdndlay7eUIY9/exec",
-        {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email, message }),
-        }
-      );
-
-      setStatus("Message Sent Successfully!");
-      setName("");
-      setEmail("");
-      setMessage("");
-    } catch {
-      setStatus("Error sending message.");
-    }
-  };
 
   return (
-    <section id="contact" className={styles.contactSection}>
+    <section id="contact" className={styles.section}>
       <h2 className={styles.title}>Get In Touch</h2>
+      <div className={styles.line} />
 
-      <div className={styles.container}>
-        {/* Left Side - Form */}
-        <form onSubmit={handleSubmit} className={styles.form}>
+      <div className={styles.wrapper}>
+        {/* LEFT FORM */}
+        <form className={styles.form}>
           <input
             type="text"
             placeholder="Your Name"
-            className={styles.input}
             value={name}
             onChange={(e) => setName(e.target.value)}
-            required
+            className={styles.input}
           />
 
           <input
             type="email"
             placeholder="Your Email"
-            className={styles.input}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            required
+            className={styles.input}
           />
 
           <textarea
             placeholder="Your Message"
-            className={styles.textarea}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            required
+            className={styles.textarea}
           />
 
-          <button type="submit" className={styles.sendBtn}>
-            Send Message
-          </button>
-
-          <p className={styles.status}>{status}</p>
+          <button className={styles.sendBtn}>Send Message</button>
         </form>
 
-        {/* Right Side - Contact info */}
+        {/* RIGHT INFO */}
         <div className={styles.infoBox}>
           <h3>Contact Information</h3>
 
