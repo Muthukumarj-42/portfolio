@@ -1,4 +1,3 @@
-import stm32 from "../assets/certificates/STM32.jpg";
 import Thumbnail from "../assets/certificates/Thumbnail.jpg";
 import banner from "../assets/certificates/Banner.jpg";
 import fsm from "../assets/certificates/FSM.png";
