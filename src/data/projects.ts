@@ -2,6 +2,11 @@ import Thumbnail from "../assets/certificates/Thumbnail.jpg";
 import banner from "../assets/certificates/Banner.jpg";
 import fsm from "../assets/certificates/FSM.png";
 import flight from "../assets/certificates/Flight.png";
+import water from "../assets/certificates/water.jpg";
+import fetal from "../assets/certificates/fetal.png";
+import safe from "../assets/certificates/Safe.jpg";
+import collision from "../assets/certificates/Collision.jpg";
+import portfolio from "../assets/certificates/portfolio.png";
 
 export const projects = [
   {
@@ -10,20 +15,22 @@ export const projects = [
     title: "Water Quality Monitoring System – Portable Kit",
     shortDesc: "Portable IoT-enabled water quality analysis kit.",
     tags: ["IoT", "Sensors", "Embedded"],
+    img: water,
     details: `
       <h2>Water Quality Monitoring System – Portable Kit</h2>
 
       <h3>Overview</h3>
       <p>
-        A portable IoT-based system for real-time analysis of water parameters such as pH, turbidity, 
-        TDS, and temperature. The project was <strong>shortlisted for Yukti Innovation Challenge 2025 – AICTE</strong>.
+        An innovative smart water quality monitoring system. Our goal is to provide real-time insights into the quality of drinking water through a seamlessly integrated system. 
+        The project was <strong>shortlisted for Yukti Innovation Challenge 2025 – AICTE</strong>.
       </p>
 
       <ul>
         <li><strong>Duration:</strong> 6 Months (Ongoing)</li>
         <li><strong>Team Size:</strong> 3 Members</li>
         <li><strong>Role Played:</strong> Hardware development, IoT integration</li>
-        <li><strong>Experience:</strong> Industrial analog sensor calibration in IoT Special Lab</li>
+        <li><strong>Experience:</strong> Expertise in integrating diverse hardware components seamlessly,
+        Coding proficiency for efficient data processing on Raspberry Pi.</li>
       </ul>
     `,
   },
@@ -34,6 +41,10 @@ export const projects = [
     title: "Fetal Monitoring Wearable Belt",
     shortDesc: "IoT-based wearable belt for fetal heartbeat monitoring.",
     tags: ["Healthcare", "IoT", "Wearable"],
+    img: fetal,
+    viewLink:
+      "https://docs.google.com/presentation/d/1iz_b26OU1c9-ai_6_3qSeDvIcg2zXAf0GRvnZJ6uyPM/edit?usp=sharing",
+
     details: `
       <h2>Fetal Monitoring Wearable Belt</h2>
 
@@ -54,9 +65,12 @@ export const projects = [
   {
     id: 3,
     category: "electronics",
-    title: "Safe Autonomous Navigation using Mobile Sensors",
+    title: "Safe Autonomous Navigation using Mobile Sensors (SIH Version)",
     shortDesc: "Using smartphone sensors to enable safe autonomous navigation.",
     tags: ["Mobile Sensors", "AI", "Navigation"],
+    img: collision,
+    viewLink:
+      "https://docs.google.com/presentation/d/1lgsQi5t-xV5bOXdu9-bJChUygypShNQZsZaUxn0yx6A/edit?usp=sharing",
     details: `
       <h2>Safe Autonomous Navigation using Mobile Phone Sensors</h2>
 
@@ -74,6 +88,7 @@ export const projects = [
       </ul>
     `,
   },
+
   {
     id: 4,
     category: "electronics",
@@ -127,46 +142,53 @@ export const projects = [
   {
     id: 5,
     category: "design",
-    title: "BGMI/PUBS Thumbnails ",
+    title: "Safe Autonomous Navigation using Mobile App – UI Design",
     shortDesc:
-      "Creative and attractive thumbnails for gaming creators(youtube)",
-    tags: ["Photoshop", "Color-Theory", "Typography"],
+      "Clean and intuitive UI/UX design for a modern flight ticket booking application.",
+    tags: ["Figma", "UI/UX", "Prototyping"],
+    img: safe,
     viewLink:
-      "https://drive.google.com/drive/folders/1aiBcLeaQA6P7nlotTUT-oCjUhmJQzo8N?usp=drive_link",
+      "https://drive.google.com/drive/folders/1lW_sx4xbsATHVh5OvQrFNyvKKrQ91pZK",
 
-    img: Thumbnail,
     details: `
-      <h3>Overview</h3>
-      <p>
-        Creative and visually engaging thumbnails designed specifically for gaming content creators to increase audience engagement and click-through rates on YouTube
-      </p>
+    <h3>Overview</h3>
+    <p>
+     SafeNav is a modern mobile UI concept built for safe autonomous navigation and 
+     real-time proximity detection. The interface provides users with clear system diagnostics, 
+     live safety scoring, nearby device awareness, and instant alerts for collision risks.
+    </p>
 
-      <ul>
-        <li><strong>Role Played:</strong> Graphic Designer & Creative Strategist</li>
-        <li><strong>Experience:</strong> Learned advanced composition, color psychology, typography and viewer-attention techniques</li>
-      </ul>
-
-    `,
+    <ul>
+      <li><strong>Screens Included:</strong> System dashboard, safety score monitor, nearby user detection, status diagnostics, and real-time hazard alerts.</li>
+      <li><strong>Role Played:</strong> UI/UX Designer – wireframing, layout design, prototyping, and visual styling.</li>
+      <li><strong>Experience:</strong> Strengthened skills in designing safety-critical UI systems, optimizing data visibility, improving alert hierarchy, 
+      and developing user-friendly autonomous navigation interfaces..</li>
+    </ul>
+  `,
   },
   {
     id: 6,
     category: "design",
-    title: "BGMI/PUBS Banners and overlays ",
+    title: "My portfolio frontend development",
     shortDesc:
       "Creative and attractive banners and overlays for gaming creators(youtube)",
-    tags: ["Photoshop", "Color-Theory", "Typography"],
-    img: banner,
-    viewLink:
-      "https://drive.google.com/drive/folders/1jrotMM781By-jLDCdmXNBG9MoKLB5jHf?usp=drive_link",
+    tags: ["React + Typescript", "Vite", "Framer motion"],
+    img: portfolio,
+    viewLink: "https://github.com/Muthukumarj-42/portfolio/blob/main/README.md",
     details: `
       <h3>Overview</h3>
       <p>
-        Professional gaming banners and overlays crafted for streamers, YouTube creators, and esports players—designed to match branding, personality, and stream aesthetics.
-      </p>
-
-      <ul>
-        <li><strong>Role Played:</strong> Graphic Designer & Creative Strategist</li>
-        <li><strong>Experience:</strong> Learned modern UI layouts, gaming theme aesthetics, color grading, and esport-style composition</li>
+        A responsive and visually modern portfolio website built to showcase projects, skills, and 
+        achievements with an interactive and smooth user experience. The design focuses on clean layout structure, 
+        strong typography, subtle animations, and fast-loading components optimized for mobile and desktop. 
+        Each section—including Hero, Skills, Projects, Certificates, and Contact—was crafted to reflect a 
+        professional personal brand.
+        <ul>
+        <li><strong>Tech Stack:</strong>React + TypeScript, Vite, CSS Modules, Framer Motion</li>
+        <li><strong>Role Played:</strong>Frontend Developer – component structuring, responsive UI building, 
+        animation integration, and performance optimization.</li>
+        <li><strong>Experience:</strong> Gained hands-on expertise in modular component design, animation logic, state-driven interactions, 
+        and building visually polished interfaces with clean reusable UI patterns.</li>
       </ul>
 
     `,
@@ -198,5 +220,53 @@ export const projects = [
       and designing intuitive multi-step user flows.</li>
     </ul>
   `,
+  },
+
+  {
+    id: 8,
+    category: "design",
+    title: "BGMI/PUBG Thumbnails ",
+    shortDesc:
+      "Creative and attractive thumbnails for gaming creators(youtube)",
+    tags: ["Photoshop", "Color-Theory", "Typography"],
+    viewLink:
+      "https://drive.google.com/drive/folders/1aiBcLeaQA6P7nlotTUT-oCjUhmJQzo8N?usp=drive_link",
+
+    img: Thumbnail,
+    details: `
+      <h3>Overview</h3>
+      <p>
+        Creative and visually engaging thumbnails designed specifically for gaming content creators to increase audience engagement and click-through rates on YouTube
+      </p>
+
+      <ul>
+        <li><strong>Role Played:</strong> Graphic Designer & Creative Strategist</li>
+        <li><strong>Experience:</strong> Learned advanced composition, color psychology, typography and viewer-attention techniques</li>
+      </ul>
+
+    `,
+  },
+  {
+    id: 9,
+    category: "design",
+    title: "BGMI/PUBG Banners and overlays ",
+    shortDesc:
+      "Creative and attractive banners and overlays for gaming creators(youtube)",
+    tags: ["Photoshop", "Color-Theory", "Typography"],
+    img: banner,
+    viewLink:
+      "https://drive.google.com/drive/folders/1jrotMM781By-jLDCdmXNBG9MoKLB5jHf?usp=drive_link",
+    details: `
+      <h3>Overview</h3>
+      <p>
+        Professional gaming banners and overlays crafted for streamers, YouTube creators, and esports players—designed to match branding, personality, and stream aesthetics.
+      </p>
+
+      <ul>
+        <li><strong>Role Played:</strong> Graphic Designer & Creative Strategist</li>
+        <li><strong>Experience:</strong> Learned modern UI layouts, gaming theme aesthetics, color grading, and esport-style composition</li>
+      </ul>
+
+    `,
   },
 ];

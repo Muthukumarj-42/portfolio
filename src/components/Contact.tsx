@@ -89,7 +89,7 @@ export default function Contact() {
             muthukumarjeyaprakash42@gmail.com
           </p>
           <p>
-            <FaPhone /> 7305514999
+            <FaPhone /> 7305514199
           </p>
           <p>
             <FaMapMarkerAlt /> Perumanallur, Tiruppur
