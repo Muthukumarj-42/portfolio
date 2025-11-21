@@ -1,35 +1,96 @@
 .skillsSection {
   padding: 100px 20px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
   text-align: center;
 }
 
 .title {
-  font-size: 2.4rem;
+  font-size: 2.7rem;
   font-weight: 700;
   margin-bottom: 40px;
   color: var(--primary);
 }
 
+/* ===================== */
+/*      TOGGLE STYLING   */
+/* ===================== */
+
+.toggleWrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.toggle {
+  background: #0f1b2b;
+  padding: 8px;
+  border-radius: 40px;
+  display: flex;
+  gap: 10px;
+}
+
+.toggleBtn {
+  padding: 10px 25px;
+  border-radius: 30px;
+  background: transparent;
+  border: none;
+  color: #c5c5c5;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toggleBtn:hover {
+  color: #00eaff;
+}
+
+.active {
+  background: #00eaff;
+  color: #000 !important;
+  font-weight: 600;
+  transform: translateY(-2px);
+}
+
+/* ===================== */
+/*        SKILL GRID     */
+/* ===================== */
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 25px;
+  justify-items: center;
 }
+
+/* ===================== */
+/*      SKILL CARDS      */
+/* ===================== */
 
 .card {
   background: #0f1a20;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 22px;
+  border-radius: 15px;
   color: white;
-  border: 1px solid rgba(0, 224, 255, 0.1);
+  border: 1px solid rgba(0, 224, 255, 0.12);
   transition: 0.3s ease;
-  font-size: 1rem;
+  font-size: 1.05rem;
+  width: 100%;
+  min-height: 80px; /* 🔥 Ensures equal-height cards */
+  display: flex;
+  align-items: center; /* Centers text vertically */
+  justify-content: center; /* Centers text horizontally */
+  text-align: center;
+  word-break: break-word; /* Prevents overflow */
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   border-color: var(--primary);
   box-shadow: 0 0 15px rgba(0, 224, 255, 0.3);
+}
+
+/* If the text is too long, reduce font size */
+.card.longText {
+  font-size: 0.95rem;
 }

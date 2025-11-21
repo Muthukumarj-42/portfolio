@@ -85,7 +85,8 @@ export default function Contact() {
           <h3>Contact Information</h3>
 
           <p>
-            <FaEnvelope /> muthukumarj.ec24@bitsathy.ac.in
+            <FaEnvelope /> muthukumarj.ec24@bitsathy.ac.in ,
+            muthukumarjeyaprakash42@gmail.com
           </p>
           <p>
             <FaPhone /> 7305514999
@@ -97,6 +98,9 @@ export default function Contact() {
           <h3 className={styles.connectTitle}>Connect With Me</h3>
 
           <div className={styles.icons}>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=muthukumarj.ec24@bitsathy.ac.in">
+              <FaEnvelope />
+            </a>
             <a
               href="https://www.linkedin.com/in/muthu-kumar-j42/"
               target="_blank"
@@ -106,7 +110,7 @@ export default function Contact() {
             <a href="https://github.com/Muthukumarj-42" target="_blank">
               <FaGithub />
             </a>
-            <a href="#">
+            <a href="https://leetcode.com/u/muthu_code/">
               <FaCode />
             </a>
           </div>

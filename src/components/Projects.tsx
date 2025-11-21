@@ -16,7 +16,7 @@ export default function Projects() {
       <h2 className={styles.title}>My Projects</h2>
       <div className={styles.line} />
 
-      {/* CENTERED TOGGLE */}
+      {/* CATEGORY TOGGLE */}
       <div className={styles.toggleWrap}>
         <div className={styles.toggle}>
           <button
@@ -27,6 +27,7 @@ export default function Projects() {
           >
             Electronics
           </button>
+
           <button
             className={`${styles.toggleBtn} ${
               category === "design" ? styles.active : ""
@@ -38,7 +39,7 @@ export default function Projects() {
         </div>
       </div>
 
-      {/* GRID */}
+      {/* PROJECT GRID */}
       <div className={styles.grid}>
         {filtered.map((p) => (
           <div
@@ -49,7 +50,6 @@ export default function Projects() {
             {p.img && (
               <img src={p.img} alt={p.title} className={styles.cardImg} />
             )}
-
             <h3>{p.title}</h3>
             <p>{p.shortDesc}</p>
 
@@ -73,17 +73,31 @@ export default function Projects() {
               className={styles.closeBtn}
               onClick={() => setOpenProject(null)}
             >
-              Close
+              ✕
             </button>
 
             <h2 className={styles.modalTitle}>{openProject.title}</h2>
+
             {openProject.img && (
               <img src={openProject.img} className={styles.modalImg} />
             )}
+
             <div
               className={styles.modalContent}
               dangerouslySetInnerHTML={{ __html: openProject.details }}
             />
+
+            {/* FIXED BUTTON → Opens GitHub & Drive Correctly */}
+            {openProject.viewLink && (
+              <a
+                href={openProject.viewLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.viewBtn}
+              >
+                View Project / Prototype / GitHub
+              </a>
+            )}
           </div>
         </div>
       )}

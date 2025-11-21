@@ -5,20 +5,10 @@ import uiuxCert from "../assets/certificates/UIUX.jpg";
 import foodCert from "../assets/certificates/KPR.jpg";
 import candenceCert from "../assets/certificates/Cadence.jpg";
 import stmCert from "../assets/certificates/STM32.jpg";
+import soc from "../assets/certificates/SOC.jpg";
+import vlsi from "../assets/certificates/VLSI day.jpg";
 
 const certificates = [
-  {
-    title: "Introduction to Graphic Design & UI/UX",
-    org: "Simplilearn",
-    date: "April 2025",
-    img: uiuxCert,
-  },
-  {
-    title: "CELESTIA’25",
-    org: "IEEE KPRIET PELS SBC, KPR Institute of Engineering and Technology",
-    date: "08 May 2025",
-    img: foodCert,
-  },
   {
     title: "Cadence EDA Training",
     org: "Entuple",
@@ -26,10 +16,34 @@ const certificates = [
     img: candenceCert,
   },
   {
+    title: "VLSI System On Chip Design - Overview",
+    org: "Maven Silicon",
+    date: "27 October 2025",
+    img: soc,
+  },
+  {
+    title: "Introduction to Graphic Design & UI/UX",
+    org: "Simplilearn",
+    date: "16 April 2025",
+    img: uiuxCert,
+  },
+  {
     title: "Mastering STM32 & RTOS",
-    org: "Pantech",
-    date: "August 2025",
+    org: "Phytec",
+    date: "4-6 August 2025",
     img: stmCert,
+  },
+  {
+    title: "VLSI DAY 2025 - Participation",
+    org: "PSG College of technology, Coimbatore",
+    date: "20 September 2025",
+    img: vlsi,
+  },
+  {
+    title: "CELESTIA’25",
+    org: "IEEE KPRIET PELS SBC, KPR Institute of Engineering and Technology",
+    date: "08 May 2025",
+    img: foodCert,
   },
 ];
 

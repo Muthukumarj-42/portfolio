@@ -1,9 +1,9 @@
 import stm32 from "../assets/certificates/STM32.jpg";
+import Thumbnail from "../assets/certificates/Thumbnail.jpg";
+import banner from "../assets/certificates/Banner.jpg";
+import fsm from "../assets/certificates/FSM.png";
 
 export const projects = [
-  // ===========================================================
-  // PRODUCT PROJECTS
-  // ===========================================================
   {
     id: 1,
     category: "electronics",
@@ -34,6 +34,7 @@ export const projects = [
     title: "Fetal Monitoring Wearable Belt",
     shortDesc: "IoT-based wearable belt for fetal heartbeat monitoring.",
     tags: ["Healthcare", "IoT", "Wearable"],
+    img: stm32,
     details: `
       <h2>Fetal Monitoring Wearable Belt</h2>
 
@@ -52,36 +53,8 @@ export const projects = [
     `,
   },
 
-  // ===========================================================
-  // SIH & MAJOR PROJECTS
-  // ===========================================================
   {
     id: 3,
-    category: "electronics",
-    title: "AI & IoT Elephant Movement Detection System",
-    shortDesc: "Real-time intelligent elephant detection using AI + IoT.",
-    tags: ["AI", "IoT", "Wildlife Safety"],
-    img: stm32, // ⭐ YOUR IMAGE HERE
-    details: `
-      <h2>AI & IoT Powered Elephant Movement Detection System</h2>
-
-      <h3>Overview</h3>
-      <p>
-        A real-time elephant intrusion detection and alerting system combining AI, IoT, and 
-        sensor fusion. Submitted to <strong>Smart India Hackathon 2025</strong>.
-      </p>
-
-      <ul>
-        <li><strong>Duration:</strong> Sep 2025 – Nov 2025 (3 Months)</li>
-        <li><strong>Team Size:</strong> 6 Members</li>
-        <li><strong>Role Played:</strong> Hardware-Software IoT integration & field testing</li>
-        <li><strong>Experience:</strong> Learned advanced IoT deployments & testing in special labs</li>
-      </ul>
-  `,
-  },
-
-  {
-    id: 4,
     category: "electronics",
     title: "Water Quality Monitoring System (SIH Version)",
     shortDesc: "Advanced IoT water quality monitoring for SIH.",
@@ -105,7 +78,7 @@ export const projects = [
   },
 
   {
-    id: 5,
+    id: 4,
     category: "electronics",
     title: "Safe Autonomous Navigation using Mobile Sensors",
     shortDesc: "Using smartphone sensors to enable safe autonomous navigation.",
@@ -132,28 +105,100 @@ export const projects = [
   // MINI PROJECTS
   // ===========================================================
   {
-    id: 6,
+    id: 5,
     category: "electronics",
-    title: "RFID-Based Door Lock System (FSM on FPGA)",
-    shortDesc: "Two-week FPGA access control system using Verilog.",
+    title: "Smart Door Access Control System (RFID – FSM on FPGA)",
+    shortDesc: "FPGA Door access control system using Verilog.",
     tags: ["FPGA", "Verilog", "Security"],
+    img: fsm,
+    viewLink: "https://github.com/Muthukumarj-42/smart-door-fsm",
     details: `
-      <h2>RFID Door Lock System using FSM on FPGA</h2>
+  <h3>Overview</h3>
+  <p>
+    A <strong>Finite State Machine (FSM)</strong> based Smart Door Access Control System implemented in 
+    <strong>Verilog</strong> on the <strong>Xilinx Zynq-7000 FPGA</strong>. The system simulates RFID 
+    authentication using <strong>8 slide switches</strong> as RFID input along with push buttons for 
+    submission and reset. It verifies the input data against stored valid IDs and provides clear 
+    <em>Access Granted / Access Denied</em> signals with a door unlock output.
+  </p>
 
+  <ul>
+    <li><strong>Duration:</strong> 1 Week</li>
+    <li><strong>Team Size:</strong> 2 Members</li>
+    <li><strong>Role Played:</strong> Verilog coding, FSM design & FPGA implementation</li>
+    <li><strong>Experience:</strong> Learned practical FSM design, simulation debugging, and real-time 
+        hardware deployment in the VLSI Special Lab</li>
+  </ul>
+
+  <h3>Key Features</h3>
+  <ul>
+    <li>FSM-based clean state transitions</li>
+    <li>Supports two valid RFID IDs (8'h33 & 8'hA1)</li>
+    <li>LED-based <strong>Access Granted / Denied</strong> indicators</li>
+    <li>Door unlock signal generation for valid input</li>
+    <li>Automatic return to IDLE state after each check</li>
+    <li>Simulation testbench verifies transitions & outputs</li>
+  </ul>
+
+  <h3>Hardware Used</h3>
+  <ul>
+    <li>Xilinx Zynq-7000 ZedBoard</li>
+    <li>8 Slide Switches — RFID Input</li>
+    <li>Push Button (Submit)</li>
+    <li>Push Button (Reset)</li>
+    <li>LEDs for system state output</li>
+  </ul>
+
+  <h3>FSM Diagram / Waveform</h3>
+  <img src="https://raw.githubusercontent.com/Muthukumarj-42/smart-door-fsm/d34c248c3e0a9bc855ed3aaa3d299cf9988a8627/Images/FSM-GRAPH.jpg" 
+       style="width:100%; border-radius:10px; margin-top:15px;" />
+`,
+  },
+  {
+    id: 6,
+    category: "design",
+    title: "BGMI/PUBS Thumbnails ",
+    shortDesc:
+      "Creative and attractive thumbnails for gaming creators(youtube)",
+    tags: ["Photoshop", "Color-Theory", "Typography"],
+    viewLink:
+      "https://drive.google.com/drive/folders/1aiBcLeaQA6P7nlotTUT-oCjUhmJQzo8N?usp=drive_link",
+
+    img: Thumbnail,
+    details: `
       <h3>Overview</h3>
       <p>
-        A secure FPGA-based door access system using RFID authentication with a 
-        custom Verilog-coded FSM.
+        Creative and visually engaging thumbnails designed specifically for gaming content creators to increase audience engagement and click-through rates on YouTube
       </p>
 
       <ul>
-        <li><strong>Duration:</strong> 2 Weeks</li>
-        <li><strong>Team Size:</strong> 2 Members</li>
-        <li><strong>Role Played:</strong> Verilog coding & FPGA implementation</li>
-        <li><strong>Experience:</strong> Learned advanced digital design in VLSI Special Lab</li>
+        <li><strong>Role Played:</strong> Graphic Designer & Creative Strategist</li>
+        <li><strong>Experience:</strong> Learned advanced composition, color psychology, typography and viewer-attention techniques</li>
       </ul>
 
     `,
-    img: "../assets/certificates/STM32.jpg", // local image (public/images/)
+  },
+  {
+    id: 7,
+    category: "design",
+    title: "BGMI/PUBS Banners and overlays ",
+    shortDesc:
+      "Creative and attractive banners and overlays for gaming creators(youtube)",
+    tags: ["Photoshop", "Color-Theory", "Typography"],
+    img: banner,
+    viewLink:
+      "https://drive.google.com/drive/folders/1jrotMM781By-jLDCdmXNBG9MoKLB5jHf?usp=drive_link",
+    details: `
+      <h3>Overview</h3>
+      <p>
+        Professional gaming banners and overlays crafted for streamers, YouTube creators, and esports players—designed to match branding, personality, and stream aesthetics.
+      </p>
+
+      <ul>
+        <li><strong>Role Played:</strong> Graphic Designer & Creative Strategist</li>
+        <li><strong>Experience:</strong> Learned modern UI layouts, gaming theme aesthetics, color grading, and esport-style composition</li>
+      </ul>
+
+    `,
   },
 ];
