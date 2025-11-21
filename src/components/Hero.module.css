@@ -15,8 +15,66 @@
   color: white;
 }
 
-.highlight {
-  color: #00eaff; /* Bright Cyan */
+/* ✨ Neon Flicker + Glow Animation */
+.neonName {
+  color: #00eaff;
+  display: inline-block;
+  animation: neonFlicker 1.8s ease-out forwards,
+    neonGlow 4s infinite ease-in-out 2s;
+  text-shadow: 0 0 5px #00eaff, 0 0 10px #00eaff;
+}
+
+/* Flicker effect when turning on */
+@keyframes neonFlicker {
+  0% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  5% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  15% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 8px #00eaff, 0 0 16px #00eaff, 0 0 32px #00eaff;
+  }
+}
+
+/* Soft breathing glow */
+@keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 8px #00eaff, 0 0 16px #00eaff;
+  }
+  50% {
+    text-shadow: 0 0 20px #00eaff, 0 0 35px #00eaff, 0 0 50px #00eaff;
+    transform: scale(1.01);
+  }
+  100% {
+    text-shadow: 0 0 8px #00eaff, 0 0 16px #00eaff;
+  }
 }
 
 .subtitle {
@@ -33,7 +91,7 @@
 }
 
 .primaryBtn {
-  background-color: #8a2be2; /* NEW COLOR */
+  background-color: #8a2be2;
   color: white;
   padding: 12px 26px;
   font-size: 1rem;
@@ -45,7 +103,7 @@
 
 .primaryBtn:hover {
   transform: translateY(-3px);
-  background-color: #a55cff; /* Hover */
+  background-color: #a55cff;
 }
 
 .secondaryBtn {
@@ -63,4 +121,56 @@
   background-color: var(--primary);
   color: black;
   transform: translateY(-3px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+/* Liquid Flow Text Animation */
+.name {
+  font-weight: 700;
+  font-size: 3.5rem;
+  position: relative;
+  display: inline-block;
+
+  background: linear-gradient(
+    120deg,
+    #00eaff,
+    #ffffff,
+    #00eaff,
+    #ffffff,
+    #00eaff
+  );
+
+  background-size: 300%;
+  background-position: 0% 50%;
+
+  /* Required for gradient text */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  animation: liquidFlow 6s infinite ease-in-out;
+}
+
+/* Smooth flowing liquid animation */
+@keyframes liquidFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

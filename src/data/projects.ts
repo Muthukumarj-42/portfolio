@@ -1,6 +1,7 @@
 import Thumbnail from "../assets/certificates/Thumbnail.jpg";
 import banner from "../assets/certificates/Banner.jpg";
 import fsm from "../assets/certificates/FSM.png";
+import flight from "../assets/certificates/Flight.png";
 
 export const projects = [
   {
@@ -50,33 +51,8 @@ export const projects = [
       </ul>
     `,
   },
-
   {
     id: 3,
-    category: "electronics",
-    title: "Water Quality Monitoring System (SIH Version)",
-    shortDesc: "Advanced IoT water quality monitoring for SIH.",
-    tags: ["IoT", "Analytics"],
-    details: `
-      <h2>Water Quality Monitoring System – SIH Edition</h2>
-
-      <h3>Overview</h3>
-      <p>
-        Enhanced IoT-enabled water quality monitoring project submitted to 
-        <strong>Smart India Hackathon 2025</strong>.
-      </p>
-
-      <ul>
-        <li><strong>Duration:</strong> 2 Months</li>
-        <li><strong>Team Size:</strong> 6 Members</li>
-        <li><strong>Role Played:</strong> IoT Integration & System Testing</li>
-        <li><strong>Experience:</strong> Hands-on experience in advanced sensor interfacing</li>
-      </ul>
-    `,
-  },
-
-  {
-    id: 4,
     category: "electronics",
     title: "Safe Autonomous Navigation using Mobile Sensors",
     shortDesc: "Using smartphone sensors to enable safe autonomous navigation.",
@@ -98,12 +74,8 @@ export const projects = [
       </ul>
     `,
   },
-
-  // ===========================================================
-  // MINI PROJECTS
-  // ===========================================================
   {
-    id: 5,
+    id: 4,
     category: "electronics",
     title: "Smart Door Access Control System (RFID – FSM on FPGA)",
     shortDesc: "FPGA Door access control system using Verilog.",
@@ -153,7 +125,7 @@ export const projects = [
 `,
   },
   {
-    id: 6,
+    id: 5,
     category: "design",
     title: "BGMI/PUBS Thumbnails ",
     shortDesc:
@@ -177,7 +149,7 @@ export const projects = [
     `,
   },
   {
-    id: 7,
+    id: 6,
     category: "design",
     title: "BGMI/PUBS Banners and overlays ",
     shortDesc:
@@ -198,5 +170,33 @@ export const projects = [
       </ul>
 
     `,
+  },
+  {
+    id: 7,
+    category: "design",
+    title: "Flight Ticket Booking App – UI Design",
+    shortDesc:
+      "Clean and intuitive UI/UX design for a modern flight ticket booking application.",
+    tags: ["Figma", "UI/UX", "Prototyping"],
+    img: flight,
+    viewLink:
+      "https://www.figma.com/design/T5B4RlMm767KULYynKIuo8/Untitled?node-id=0-1&t=OiL5IufLXvIk2gPL-1",
+
+    details: `
+    <h3>Overview</h3>
+    <p>
+      A complete flight booking app UI designed with a modern aviation theme. 
+      The design covers the full user journey including flight search, ticket details, 
+      seat selection, and boarding pass generation. The interface focuses on clarity, 
+      fast navigation, strong visual hierarchy, and a clean red–white airline-inspired style.
+    </p>
+
+    <ul>
+      <li><strong>Screens Included:</strong> Flight search & listing, ticket/boarding pass view, and seat selection.</li>
+      <li><strong>Role Played:</strong> UI/UX Designer – wireframing, layout design, prototyping, and visual styling.</li>
+      <li><strong>Experience:</strong> Learned workflow structuring, information hierarchy balance, aviation UI standards, 
+      and designing intuitive multi-step user flows.</li>
+    </ul>
+  `,
   },
 ];

@@ -25,6 +25,8 @@ function Skills() {
 
   const programmingSkills = [
     "C (Beginner)",
+    "HTML",
+    "CSS",
     "Python (Beginner)",
     "Verilog (Beginner)",
     "Vibe Coding",
