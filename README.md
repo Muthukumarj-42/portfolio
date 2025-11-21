@@ -1,3 +1,101 @@
+Here’s a clean, professional **README.md** you can directly paste into your GitHub repo 👇
+
+---
+
+# Portfolio Website
+
+A modern, responsive personal portfolio built to showcase my skills, projects, experience, and achievements.
+This portfolio is deployed and live here:
+
+👉 **Live Portfolio:** [https://muthukumarj-portfolio.vercel.app/](https://muthukumarj-portfolio.vercel.app/)
+
+---
+
+## 🚀 About the Project
+
+This portfolio website is designed to provide a clean and attractive representation of who I am, what I do, and the work I have completed.
+It includes sections like:
+
+* **Home / Hero Section**
+* **About Me**
+* **Skills**
+* **Projects**
+* **Achievements**
+* **Contact Section**
+* **Smooth UI Animations & Responsive Layout**
+
+The project is optimized for both desktop and mobile devices with a professional and minimal UI.
+
+---
+
+## 🛠️ Tech Stack
+
+* **HTML5**
+* **CSS3 / Tailwind CSS / Custom Styles**
+* **JavaScript**
+* **React / Next.js** (if applicable)
+* **Vercel** for deployment
+
+---
+
+## 📂 Folder Structure (General Overview)
+
+```
+root/
+│── public/
+│── src/
+│   ├── components/
+│   ├── styles/
+│   ├── pages/
+│── package.json
+│── README.md
+```
+
+---
+
+## 🔧 Setup & Installation
+
+To run this project locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/Muthukumarj-42/portfolio
+
+# Navigate into the folder
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+The site will be available at:
+`http://localhost:3000`
+
+---
+
+## 🌐 Deployment
+
+Deployed using **Vercel** for fast, reliable, and global hosting.
+
+Live Link → **[https://muthukumarj-portfolio.vercel.app/](https://muthukumarj-portfolio.vercel.app/)**
+
+---
+
+## 📬 Contact
+
+If you'd like to collaborate or reach out:
+
+**Name:** Muthu Kumar J
+**Portfolio:** [https://muthukumarj-portfolio.vercel.app/](https://muthukumarj-portfolio.vercel.app/)
+**GitHub:** [https://github.com/Muthukumarj-42](https://github.com/Muthukumarj-42)
+
+---
+
+If you want, I can also add **badges**, **screenshots**, or a more stylish README.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
