@@ -34,7 +34,6 @@ export const projects = [
     title: "Fetal Monitoring Wearable Belt",
     shortDesc: "IoT-based wearable belt for fetal heartbeat monitoring.",
     tags: ["Healthcare", "IoT", "Wearable"],
-    img: stm32,
     details: `
       <h2>Fetal Monitoring Wearable Belt</h2>
 
