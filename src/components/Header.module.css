@@ -1,10 +1,11 @@
+/* HEADER WRAPPER */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 18px 40px;
-  background: rgba(10, 15, 20, 0.85);
+  padding: 14px 20px;
+  background: rgba(10, 15, 20, 0.9);
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
@@ -13,51 +14,48 @@
   border-bottom: 1px solid rgba(0, 200, 255, 0.1);
 }
 
+/* LOGO */
 .logo {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   color: #00eaff;
+  white-space: nowrap;
 }
 
-/* RIGHT ALIGN NAV */
+/* NAVIGATION (DESKTOP) */
 .nav {
   display: flex;
-  gap: 30px;
-  margin-left: auto;
   align-items: center;
+  gap: 28px;
 }
 
 .nav a {
   color: white;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 500;
   transition: 0.3s ease;
+  white-space: nowrap;
 }
 
-.nav a:hover {
-  color: #00eaff;
-  transform: translateY(-2px);
-}
-
-/* HIGHLIGHT ACTIVE LINK */
+.nav a:hover,
 .activeLink {
   color: #00eaff;
-  font-weight: 600;
 }
 
 /* DOWNLOAD CV BUTTON */
 .downloadBtn {
   background: #00eaff;
   color: #000;
-  padding: 10px 22px;
-  border-radius: 30px;
+  padding: 10px 20px;
+  border-radius: 25px;
   font-weight: 700;
   text-decoration: none;
   border: none;
   cursor: pointer;
   transition: 0.3s ease;
   animation: blink 2s infinite;
+  white-space: nowrap;
 }
 
 .downloadBtn:hover {
@@ -75,5 +73,53 @@
   }
   100% {
     box-shadow: 0 0 0px #00eaff;
+  }
+}
+
+/* ------------------------------- */
+/* MOBILE RESPONSIVE */
+/* ------------------------------- */
+
+.menuIcon {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE NAV MENU */
+.mobileNav {
+  position: fixed;
+  top: 65px;
+  right: 0;
+  width: 70%;
+  height: calc(100% - 65px);
+  background: rgba(8, 12, 16, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  transform: translateX(100%);
+  transition: 0.3s ease;
+  z-index: 2000;
+}
+
+.mobileNav.open {
+  transform: translateX(0);
+}
+
+.mobileNav a {
+  font-size: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+@media (max-width: 880px) {
+  .nav {
+    display: none;
+  }
+  .menuIcon {
+    display: block;
   }
 }

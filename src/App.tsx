@@ -5,6 +5,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Certificates from "./pages/Certificates";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -34,6 +35,7 @@ export default function App() {
       <section id="contact">
         <Contact />
       </section>
+      <Footer />
     </>
   );
 }

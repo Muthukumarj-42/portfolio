@@ -1,25 +1,28 @@
 .certificatesSection {
-  padding: 100px 40px; /* More side space */
+  padding: 90px 15px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .title {
   text-align: center;
-  font-size: 2.8rem;
-  margin-bottom: 40px;
+  font-size: 2.3rem;
+  margin-bottom: 30px;
   color: var(--primary);
 }
 
+/* GRID FIXED */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  gap: 40px; /* Bigger gap between cards */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
 }
 
 .card {
   background: #0d1a22;
-  border-radius: 16px;
-  padding: 25px;
-  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 4px 18px rgba(0, 255, 255, 0.12);
   transition: 0.3s ease;
 }
 
@@ -30,56 +33,56 @@
 
 .image {
   width: 100%;
-  height: auto; /* FIX: no cropping */
-  max-height: 260px; /* Smaller size */
-  object-fit: contain; /* FULL certificate visible */
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
   border-radius: 10px;
 }
 
+/* TEXT */
 .certTitle {
-  margin-top: 15px;
-  font-size: 1.25rem;
+  margin-top: 12px;
+  font-size: 1.1rem;
   font-weight: 700;
   color: white;
 }
 
 .certOrg {
   color: #bfc8cc;
-  margin-top: 5px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  margin-top: 3px;
 }
 
 .certDate {
   color: #9fb3b9;
-  font-size: 0.9rem;
-  margin-top: 4px;
+  font-size: 0.85rem;
+  margin-top: 2px;
 }
-/* Fullscreen container */
+
+/* FULL SCREEN VIEW */
 .fullScreenWrapper {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.92);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
 }
 
-/* Fullscreen image */
 .fullScreenImage {
   max-width: 95%;
   max-height: 95%;
   object-fit: contain;
   border-radius: 10px;
-  box-shadow: 0 0 20px #00eaff;
+  box-shadow: 0 0 18px #00eaff;
 }
 
-/* Close button */
 .closeBtn {
   position: fixed;
   top: 20px;
   right: 20px;
-  font-size: 22px;
+  font-size: 20px;
   padding: 10px 15px;
   background: #00eaff;
   border: none;
@@ -87,9 +90,4 @@
   cursor: pointer;
   color: #000;
   font-weight: 700;
-  z-index: 10000;
-}
-
-.closeBtn:hover {
-  background: white;
 }
