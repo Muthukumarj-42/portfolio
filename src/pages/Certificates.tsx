@@ -22,16 +22,16 @@ const certificates = [
     img: soc,
   },
   {
-    title: "Introduction to Graphic Design & UI/UX",
-    org: "Simplilearn",
-    date: "16 April 2025",
-    img: uiuxCert,
-  },
-  {
     title: "Mastering STM32 & RTOS",
     org: "Phytec",
     date: "4-6 August 2025",
     img: stmCert,
+  },
+  {
+    title: "Introduction to Graphic Design & UI/UX",
+    org: "Simplilearn",
+    date: "16 April 2025",
+    img: uiuxCert,
   },
   {
     title: "VLSI DAY 2025 - Participation",
@@ -52,7 +52,6 @@ export default function Certificates() {
 
   return (
     <>
-      {/* FULLSCREEN VIEWER */}
       {fullscreenImg && (
         <div className={styles.fullScreenWrapper}>
           <img src={fullscreenImg} className={styles.fullScreenImage} />
@@ -64,8 +63,6 @@ export default function Certificates() {
           </button>
         </div>
       )}
-
-      {/* NORMAL PAGE */}
       {!fullscreenImg && (
         <section className={styles.certificatesSection}>
           <h2 className={styles.title}>My Certificates</h2>

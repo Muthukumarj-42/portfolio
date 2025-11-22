@@ -83,7 +83,7 @@ export const projects = [
       <ul>
         <li><strong>Duration:</strong> Sep 2025 – Nov 2025</li>
         <li><strong>Team Size:</strong> 6 Members</li>
-        <li><strong>Role Played:</strong> Ideation & system design</li>
+        <li><strong>Role Played:</strong> Frontend and UI/UX Design</li>
         <li><strong>Experience:</strong> Learned problem-solving through hackathons</li>
       </ul>
     `,
