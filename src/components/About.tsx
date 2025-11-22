@@ -28,7 +28,7 @@ function About() {
         className={styles.text}
       >
         I am a{" "}
-        <strong>B.E. Electronics and Communication Engineering student</strong>
+        <strong>B.E. Electronics and Communication Engineering student </strong>
         with a strong interest in{" "}
         <strong>
           embedded systems, IoT, microcontrollers, and real-time hardware
@@ -38,7 +38,7 @@ function About() {
         <br />
         <br />
         Alongside engineering, I am a{" "}
-        <strong>Creative Graphic & UI/UX Designer</strong>
+        <strong>Creative Graphic & UI/UX Designer </strong>
         skilled in crafting modern interfaces, thumbnails, banners and brand
         content. I combine <strong>technology + design</strong> to build
         meaningful and aesthetic digital experiences.
