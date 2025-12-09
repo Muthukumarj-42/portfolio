@@ -57,7 +57,7 @@ export const projects = [
       <ul>
         <li><strong>Duration:</strong> 6 Months (Ongoing)</li>
         <li><strong>Team Size:</strong> 3 Members</li>
-        <li><strong>Role Played:</strong> Hardware development & IoT architecture</li>
+        <li><strong>Role Played:</strong> Frontend and UI/UX Design</li>
         <li><strong>Experience:</strong> Gained expertise in healthcare ubiquitous computing</li>
       </ul>
     `,
@@ -171,7 +171,7 @@ export const projects = [
     category: "design",
     title: "My portfolio frontend development",
     shortDesc:
-      "Creative and attractive banners and overlays for gaming creators(youtube)",
+      "A modern and responsive portfolio showcasing my engineering projects, design work, and skills with a clean UI.",
     tags: ["React + Typescript", "Vite", "Framer motion"],
     img: portfolio,
     viewLink: "https://github.com/Muthukumarj-42/portfolio/blob/main/README.md",

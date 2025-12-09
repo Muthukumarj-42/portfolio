@@ -27,24 +27,26 @@ function About() {
         transition={{ duration: 0.8 }}
         className={styles.text}
       >
-        I am a{" "}
-        <strong>B.E. Electronics and Communication Engineering student </strong>
-        with a strong interest in{" "}
+        Dedicated{" "}
+        <strong>Electronics and Communication Engineering student</strong> with
+        a strong interest in{" "}
         <strong>
           embedded systems, IoT, microcontrollers, and real-time hardware
           development
         </strong>
-        .
+        . I enjoy turning ideas into functional prototypes through hands-on
+        engineering and system integration.
         <br />
         <br />
-        Alongside engineering, I am a{" "}
-        <strong>Creative Graphic & UI/UX Designer </strong>
-        skilled in crafting modern interfaces, thumbnails, banners and brand
-        content. I combine <strong>technology + design</strong> to build
-        meaningful and aesthetic digital experiences.
+        Alongside engineering, I work as{" "}
+        <strong>Frontend & UI/UX Designer</strong> skilled in designing modern
+        interfaces and digital brand content. I combine{" "}
+        <strong>technology + design</strong> to create intuitive, meaningful,
+        and visually compelling user experiences.
         <br />
-        <br />I bring leadership, adaptability, a strong mindset, and a clear
-        approach to solving problems — with professionalism and passion.
+        <br />I bring leadership, adaptability, clear problem-solving, and a
+        strong work ethic — approaching every project with professionalism,
+        creativity, and a passion for continuous learning.
       </motion.p>
 
       {/* Download CV Button */}
