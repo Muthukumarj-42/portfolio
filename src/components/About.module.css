@@ -1,83 +1,129 @@
 .aboutSection {
-  padding: 100px 20px;
-  max-width: 1000px;
+  padding: 120px 5%;
+  max-width: 1100px;
   margin: auto;
   text-align: center;
+  position: relative;
 }
 
 .title {
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: var(--primary);
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #fff;
 }
 
 .text {
-  font-size: 1.1rem;
-  color: var(--text-light);
-  line-height: 1.7;
+  font-size: 1.15rem;
+  color: #a0abb6;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 300;
+  text-align: left;
+}
+
+.text strong {
+  color: #fff;
+  font-weight: 600;
 }
 
 /* CV Button */
 .cvBtn {
-  margin-top: 25px;
-  display: inline-block;
-  background: #00eaff;
-  color: #000;
-  padding: 12px 26px;
-  border-radius: 8px;
+  margin-top: 40px;
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 30px;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1rem;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .cvBtn:hover {
-  background: #0dcedf;
-  transform: translateY(-3px);
-  box-shadow: 0 0 12px rgba(0, 234, 255, 0.7);
+  transform: translateY(-2px);
+  background: var(--primary);
+  color: #000;
+  border-color: var(--primary);
+  box-shadow: 0 4px 15px rgba(0, 234, 255, 0.2);
 }
 
 /* EDUCATION SECTION */
-
 .eduTitle {
-  margin-top: 70px;
-  margin-bottom: 30px;
-  font-size: 2.2rem;
-  color: var(--primary);
+  margin-top: 100px;
+  margin-bottom: 50px;
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #fff;
 }
 
 .eduContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* EDUCATION CARD */
 .eduCard {
-  background: #0e1a22;
-  border-radius: 16px;
-  padding: 25px;
+  background: rgba(20, 25, 35, 0.6);
+  border-radius: 20px;
+  padding: 30px;
   display: flex;
-  gap: 20px;
+  gap: 24px;
   align-items: center;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
-  border: 1px solid rgba(0, 255, 255, 0.08);
-  transition: 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  min-height: 170px;
+  position: relative;
+  overflow: hidden;
+}
+
+.eduCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg, rgba(0, 234, 255, 0.5), transparent, rgba(138, 43, 226, 0.5));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.eduCard:hover::before {
+  opacity: 1;
 }
 
 .eduCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(25, 30, 40, 0.8);
 }
 
 /* LEFT LOGO */
 .eduLogo {
-  width: 80px;
-  height: 80px;
-  background: white;
-  border-radius: 12px;
+  width: 90px;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
   object-fit: contain;
-  padding: 10px;
+  padding: 12px;
+  transition: transform 0.3s ease;
+}
+
+.eduCard:hover .eduLogo {
+  transform: scale(1.05);
 }
 
 /* RIGHT SIDE TEXT */
@@ -87,39 +133,45 @@
 }
 
 .eduDegree {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: white;
   font-weight: 700;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  line-height: 1.4;
 }
 
 .eduInst {
   color: var(--primary);
   font-size: 0.95rem;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  font-weight: 500;
 }
 
 /* YEAR + SCORE ROW */
 .eduRow {
   display: flex;
   justify-content: space-between;
-  font-size: 0.95rem;
-  color: #bcd2d8;
+  font-size: 0.9rem;
+  color: #a0abb6;
 }
 
 .eduYear {
-  font-weight: 600;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 12px;
+  border-radius: 20px;
 }
 
 .eduScore {
   font-weight: 600;
   color: #00eaff;
+  background: rgba(0, 234, 255, 0.05);
+  padding: 4px 12px;
+  border-radius: 20px;
 }
+
 .cardLink {
   text-decoration: none;
   color: inherit;
-}
-.eduCard {
-  /* your existing styles */
-  min-height: 170px;
+  display: block;
 }

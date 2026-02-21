@@ -7,10 +7,6 @@ function Skills() {
     "electronics" | "programming" | "design"
   >("electronics");
 
-  // ==========================
-  // SKILL GROUPS
-  // ==========================
-
   const electronicsSkills = [
     "Arduino",
     "ESP32",
@@ -46,9 +42,9 @@ function Skills() {
     "Thumbnails & Banners",
     "Video Editing",
     "CapCut",
+    "Premiere pro",
   ];
 
-  // SELECTED LIST
   const filteredSkills =
     category === "electronics"
       ? electronicsSkills
@@ -69,7 +65,6 @@ function Skills() {
         Skills
       </motion.h2>
 
-      {/* TOGGLE BUTTONS */}
       <div className={styles.toggleWrap}>
         <div className={styles.toggle}>
           <button
@@ -101,7 +96,6 @@ function Skills() {
         </div>
       </div>
 
-      {/* GRID */}
       <div className={styles.grid}>
         {filteredSkills.map((skill, index) => (
           <motion.div

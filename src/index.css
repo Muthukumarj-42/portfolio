@@ -1,4 +1,16 @@
-/* Reset */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #00eaff;
+  --primary-dark: #00bcd4;
+  --accent: #8a2be2;
+  --accent-light: #a55cff;
+  --bg-dark: #07090f;
+  --bg-card: rgba(20, 25, 35, 0.6);
+  --text-main: #ffffff;
+  --text-light: #b0bac5;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,12 +18,17 @@
 }
 
 body {
-  background: #0a0f14;
-  color: white;
-  font-family: "Inter", sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(0, 234, 255, 0.3);
+  color: #fff;
 }

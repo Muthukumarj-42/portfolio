@@ -1,229 +1,310 @@
 .section {
-  padding: 100px 5%;
+  padding: 120px 5%;
   text-align: center;
   color: #fff;
+  background: var(--bg-dark);
+  position: relative;
 }
 
 .title {
-  font-size: 48px;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
 }
 
 .line {
-  width: 120px;
-  height: 5px;
-  background: #00eaff;
-  margin: 10px auto 50px;
-  border-radius: 10px;
-  animation: grow 0.6s ease;
-}
-
-@keyframes grow {
-  from {
-    width: 0;
-    opacity: 0;
-  }
-  to {
-    width: 120px;
-    opacity: 1;
-  }
+  width: 80px;
+  height: 4px;
+  background: var(--primary);
+  margin: 16px auto 50px;
+  border-radius: 4px;
 }
 
 /* Toggle */
 .toggleWrap {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .toggle {
-  background: #0f1b2b;
-  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px;
   border-radius: 40px;
   display: flex;
-  gap: 10px;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .toggleBtn {
-  padding: 10px 22px;
+  padding: 12px 28px;
   border-radius: 30px;
   background: transparent;
   border: none;
-  color: #c5c5c5;
-  font-size: 16px;
+  color: #a0abb6;
+  font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .toggleBtn:hover {
-  color: #00eaff;
+  color: #fff;
 }
 
 .active {
-  background: #00eaff;
-  color: #000 !important;
-  font-weight: 600;
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff !important;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .card {
-  background: #0e1624;
-  padding: 28px;
-  border-radius: 15px;
-  border: 1px solid #0a2535;
-  transition: 0.3s;
+  background: rgba(15, 20, 28, 0.8);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
   cursor: pointer;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0px 8px 30px rgba(0, 238, 255, 0.15);
-  border-color: #00eaff;
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(25, 30, 40, 0.9);
+}
+
+.imgWrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardImgPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .cardImg {
   width: 100%;
-  height: 180px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 15px;
+  transition: transform 0.5s ease;
 }
 
-.card h3 {
-  font-size: 22px;
-  text-align: left;
-  margin-bottom: 10px;
+.card:hover .cardImg {
+  transform: scale(1.05);
 }
 
-.card p {
-  opacity: 0.8;
-  margin-bottom: 15px;
-  text-align: left;
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay span {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.6);
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .overlay span {
+  transform: translateY(0);
+}
+
+.cardContent {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: linear-gradient(to top, rgba(10, 15, 20, 0.95), rgba(14, 22, 36, 0.95));
+}
+
+.cardContent h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.cardContent p {
+  color: #a0abb6;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .tags span {
   padding: 6px 14px;
-  background: #0a2535;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 20px;
-  margin-right: 8px;
-  font-size: 13px;
-  color: #00eaff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #a0abb6;
 }
 
-/* MODAL OVERLAY */
+/* Modal */
 .modalOverlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(15px);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px;
-  z-index: 2000;
+  padding: 20px;
+  z-index: 9999;
 }
 
-/* MODAL */
 .modal {
-  background: #0d1522;
-  padding: 35px;
+  background: rgba(15, 20, 28, 0.95);
+  padding: 40px;
   max-width: 900px;
-  width: 90%;
-  border-radius: 18px;
-  border: 1px solid #00eaff30;
+  width: 100%;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
-  animation: pop 0.3s ease-out;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
 }
 
-@keyframes pop {
-  from {
-    transform: scale(0.85);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+.modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
 }
 
 .closeBtn {
   position: absolute;
-  top: 14px;
-  right: 18px;
-  background: #ff3b3b;
+  top: 24px;
+  right: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .closeBtn:hover {
-  background: #ff1e1e;
+  background: rgba(255, 59, 59, 0.8);
+  transform: rotate(90deg);
 }
 
 .modalTitle {
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 24px;
+  font-weight: 800;
+  color: #fff;
+  padding-right: 40px;
+}
+
+.modalImgWrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .modalImg {
   width: 100%;
-  border-radius: 12px;
-  margin-bottom: 20px;
+  display: block;
 }
 
-/* SCROLL CONTENT */
 .modalContent {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #d6d6d6;
-}
-
-.modalContent h3 {
-  color: #00eaff;
-  margin-top: 20px;
-}
-
-/* VIEW PROJECT BUTTON */
-.viewBtn {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 12px 25px;
-  background: #00eaff;
-  color: #000;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.viewBtn:hover {
-  background: #00bcd4;
-  transform: translateY(-2px);
-}
-/* Left align text inside modal content */
-.modalContent {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #a0abb6;
   text-align: left;
 }
 
-/* Ensure lists inside modal are properly aligned */
+.modalContent h3 {
+  color: #fff;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
 .modalContent ul {
-  padding-left: 25px;
-  margin-top: 10px;
+  padding-left: 20px;
+  margin-top: 12px;
 }
 
 .modalContent li {
-  margin-bottom: 8px;
-  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.viewBtn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 32px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.viewBtn:hover {
+  transform: translateY(-2px);
+  background: var(--primary);
+  color: #000;
+  border-color: var(--primary);
+  box-shadow: 0 4px 15px rgba(0, 234, 255, 0.2);
 }

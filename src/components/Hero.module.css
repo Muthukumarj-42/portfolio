@@ -1,176 +1,178 @@
 .hero {
-  height: 100vh;
-  background: radial-gradient(circle at center, #0f2a33, #0a0f14 60%);
+  min-height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 0 20px;
+  overflow: hidden;
+  background: var(--bg-dark);
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+  background: radial-gradient(circle at center, #0a0f18, #05070a);
+}
+
+.heroBackground::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 234, 255, 0.15), transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(138, 43, 226, 0.15), transparent 50%);
+  animation: bgRotate 30s linear infinite;
+}
+
+@keyframes bgRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badge {
+  background: rgba(0, 234, 255, 0.1);
+  border: 1px solid rgba(0, 234, 255, 0.3);
+  color: var(--primary);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  backdrop-filter: blur(10px);
 }
 
 .title {
-  font-size: 3.5rem;
-  font-weight: 700;
+  font-size: 4.5rem;
+  font-weight: 800;
   color: white;
+  line-height: 1.1;
+  letter-spacing: -1px;
 }
 
-/* ✨ Neon Flicker + Glow Animation */
-.neonName {
-  color: #00eaff;
-  display: inline-block;
-  animation: neonFlicker 1.8s ease-out forwards,
-    neonGlow 4s infinite ease-in-out 2s;
-  text-shadow: 0 0 5px #00eaff, 0 0 10px #00eaff;
+.nameHighlight {
+  display: block;
+  background: linear-gradient(to right, #00eaff, #8a2be2, #00eaff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shine 4s linear infinite;
+  text-shadow: 0px 0px 40px rgba(0, 234, 255, 0.3);
 }
 
-/* Flicker effect when turning on */
-@keyframes neonFlicker {
-  0% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  5% {
-    opacity: 1;
-  }
-  10% {
-    opacity: 0.4;
-  }
-  15% {
-    opacity: 1;
-  }
-  20% {
-    opacity: 0.5;
-  }
-  30% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 0.7;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-    text-shadow: 0 0 8px #00eaff, 0 0 16px #00eaff, 0 0 32px #00eaff;
-  }
-}
-
-/* Soft breathing glow */
-@keyframes neonGlow {
-  0% {
-    text-shadow: 0 0 8px #00eaff, 0 0 16px #00eaff;
-  }
-  50% {
-    text-shadow: 0 0 20px #00eaff, 0 0 35px #00eaff, 0 0 50px #00eaff;
-    transform: scale(1.01);
-  }
-  100% {
-    text-shadow: 0 0 8px #00eaff, 0 0 16px #00eaff;
+@keyframes shine {
+  to {
+    background-position: 200% center;
   }
 }
 
 .subtitle {
-  margin-top: 15px;
-  font-size: 1.2rem;
+  margin-top: 24px;
+  font-size: 1.25rem;
+  font-weight: 300;
   color: var(--text-light);
-  max-width: 700px;
+  max-width: 600px;
+  line-height: 1.6;
 }
 
 .btnGroup {
   margin-top: 40px;
   display: flex;
-  gap: 20px;
+  gap: 24px;
 }
 
 .primaryBtn {
-  background-color: #8a2be2;
-  color: white;
-  padding: 12px 26px;
-  font-size: 1rem;
-  border-radius: 8px;
+  position: relative;
+  background: linear-gradient(45deg, var(--primary), #0088ff);
+  color: #000;
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  border-radius: 12px;
   text-decoration: none;
-  font-weight: 600;
-  transition: 0.25s ease;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 10px 20px rgba(0, 234, 255, 0.2);
+  overflow: hidden;
+}
+
+.primaryBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: all 0.5s ease;
 }
 
 .primaryBtn:hover {
-  transform: translateY(-3px);
-  background-color: #a55cff;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 234, 255, 0.4);
+}
+
+.primaryBtn:hover::before {
+  left: 100%;
 }
 
 .secondaryBtn {
-  border: 2px solid var(--primary);
-  color: var(--primary);
-  padding: 12px 26px;
-  font-size: 1rem;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
-  transition: 0.25s ease;
+  transition: all 0.3s ease;
 }
 
 .secondaryBtn:hover {
-  background-color: var(--primary);
-  color: black;
-  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-5px);
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   .title {
-    font-size: 2.4rem;
+    font-size: 3rem;
   }
 
   .subtitle {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    padding: 0 10px;
   }
-}
-/* Liquid Flow Text Animation */
-.name {
-  font-weight: 700;
-  font-size: 3.5rem;
-  position: relative;
-  display: inline-block;
 
-  background: linear-gradient(
-    120deg,
-    #00eaff,
-    #ffffff,
-    #00eaff,
-    #ffffff,
-    #00eaff
-  );
-
-  background-size: 300%;
-  background-position: 0% 50%;
-
-  /* Required for gradient text */
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-
-  animation: liquidFlow 6s infinite ease-in-out;
-}
-
-/* Smooth flowing liquid animation */
-@keyframes liquidFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+  .btnGroup {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 300px;
   }
 }
