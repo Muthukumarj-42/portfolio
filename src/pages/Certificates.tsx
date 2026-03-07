@@ -7,8 +7,15 @@ import candenceCert from "../assets/certificates/Cadence.jpg";
 import stmCert from "../assets/certificates/STM32.jpg";
 import soc from "../assets/certificates/SOC.jpg";
 import vlsi from "../assets/certificates/VLSI day.jpg";
+import hack from "../assets/certificates/HACKSPRINT.jpg";
 
 const certificates = [
+  {
+    title: "HACKSPRINT 2.0 - 36 HOURS HACKATHON WINNER",
+    org: "Karpagam academy of higher education, Coimbatore",
+    date: "22 Jan 2026",
+    img: hack,
+  },
   {
     title: "Cadence EDA Training",
     org: "Entuple",
@@ -59,7 +66,7 @@ export default function Certificates() {
             className={styles.closeBtn}
             onClick={() => setFullscreenImg(null)}
           >
-            ✕ Close
+            Close
           </button>
         </div>
       )}
