@@ -194,35 +194,6 @@ export const projects = [
     `,
   },
   {
-    id: 7,
-    category: "design",
-    title: "Flight Ticket Booking App – UI Design",
-    shortDesc:
-      "Clean and intuitive UI/UX design for a modern flight ticket booking application.",
-    tags: ["Figma", "UI/UX", "Prototyping"],
-    img: flight,
-    viewLink:
-      "https://www.figma.com/design/T5B4RlMm767KULYynKIuo8/Untitled?node-id=0-1&t=OiL5IufLXvIk2gPL-1",
-
-    details: `
-    <h3>Overview</h3>
-    <p>
-      A complete flight booking app UI designed with a modern aviation theme. 
-      The design covers the full user journey including flight search, ticket details, 
-      seat selection, and boarding pass generation. The interface focuses on clarity, 
-      fast navigation, strong visual hierarchy, and a clean red–white airline-inspired style.
-    </p>
-
-    <ul>
-      <li><strong>Screens Included:</strong> Flight search & listing, ticket/boarding pass view, and seat selection.</li>
-      <li><strong>Role Played:</strong> UI/UX Designer – wireframing, layout design, prototyping, and visual styling.</li>
-      <li><strong>Experience:</strong> Learned workflow structuring, information hierarchy balance, aviation UI standards, 
-      and designing intuitive multi-step user flows.</li>
-    </ul>
-  `,
-  },
-
-  {
     id: 8,
     category: "design",
     title: "BGMI/PUBG Thumbnails ",
