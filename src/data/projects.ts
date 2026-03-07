@@ -1,7 +1,6 @@
 import Thumbnail from "../assets/certificates/Thumbnail.jpg";
 import banner from "../assets/certificates/Banner.jpg";
 import fsm from "../assets/certificates/FSM.png";
-import flight from "../assets/certificates/Flight.png";
 import water from "../assets/certificates/water.jpg";
 import fetal from "../assets/certificates/fetal.png";
 import safe from "../assets/certificates/Safe.jpg";
