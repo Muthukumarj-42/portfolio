@@ -2,7 +2,6 @@ import { useState } from "react";
 import styles from "./Certificates.module.css";
 
 import uiuxCert from "../assets/certificates/UIUX.jpg";
-import foodCert from "../assets/certificates/KPR.jpg";
 import candenceCert from "../assets/certificates/Cadence.jpg";
 import stmCert from "../assets/certificates/STM32.jpg";
 import soc from "../assets/certificates/SOC.jpg";
@@ -46,12 +45,6 @@ const certificates = [
     date: "20 September 2025",
     img: vlsi,
   },
-  {
-    title: "CELESTIA’25",
-    org: "IEEE KPRIET PELS SBC, KPR Institute of Engineering and Technology",
-    date: "08 May 2025",
-    img: foodCert,
-  },
 ];
 
 export default function Certificates() {
@@ -66,7 +59,7 @@ export default function Certificates() {
             className={styles.closeBtn}
             onClick={() => setFullscreenImg(null)}
           >
-            Close
+            X
           </button>
         </div>
       )}
