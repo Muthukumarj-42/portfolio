@@ -140,6 +140,37 @@ export const projects = [
 `,
   },
   {
+    id: 5,
+    category: "design",
+    title: "SS International Group Corporate Website",
+    shortDesc:
+      "Designed and developed a modern corporate website for a multi-industry international company showcasing their business divisions and project galleries.",
+
+    tags: ["React", "UI/UX Design", "Responsive Design", "Web Development"],
+
+    viewLink: "https://github.com/Muthukumarj-42/ssingroup",
+
+    img: ssingroup,
+
+    details: `
+    <h3>Overview</h3>
+    <p>
+      Designed and developed a professional corporate website for <strong>SS International Group</strong>, 
+      a multi-industry business operating in sectors such as construction, real estate, jewellery, garments, 
+      finance, and organic products. The website highlights the company’s services, projects, and global presence 
+      with a clean and modern UI.
+    </p>
+
+    <ul>
+      <li><strong>Role Played:</strong> UI/UX Designer & Frontend Developer</li>
+      <li><strong>Technologies Used:</strong> React, Tailwind CSS, Vercel Deployment</li>
+      <li><strong>Features:</strong> Multi-industry business pages, project galleries with photos and videos, responsive layout, and modern corporate design</li>
+      <li><strong>Deployment:</strong> Hosted and deployed using Vercel</li>
+      <li><strong>Source Code:</strong> Available on GitHub</li>
+    </ul>
+  `,
+  },
+  {
     id: 10,
     category: "design",
     title: "Safe Autonomous Navigation using Mobile App – UI Design",
@@ -239,36 +270,5 @@ export const projects = [
       </ul>
 
     `,
-  },
-  {
-    id: 5,
-    category: "design",
-    title: "SS International Group Corporate Website",
-    shortDesc:
-      "Designed and developed a modern corporate website for a multi-industry international company showcasing their business divisions and project galleries.",
-
-    tags: ["React", "UI/UX Design", "Responsive Design", "Web Development"],
-
-    viewLink: "https://github.com/Muthukumarj-42/ssingroup",
-
-    img: ssingroup,
-
-    details: `
-    <h3>Overview</h3>
-    <p>
-      Designed and developed a professional corporate website for <strong>SS International Group</strong>, 
-      a multi-industry business operating in sectors such as construction, real estate, jewellery, garments, 
-      finance, and organic products. The website highlights the company’s services, projects, and global presence 
-      with a clean and modern UI.
-    </p>
-
-    <ul>
-      <li><strong>Role Played:</strong> UI/UX Designer & Frontend Developer</li>
-      <li><strong>Technologies Used:</strong> React, Tailwind CSS, Vercel Deployment</li>
-      <li><strong>Features:</strong> Multi-industry business pages, project galleries with photos and videos, responsive layout, and modern corporate design</li>
-      <li><strong>Deployment:</strong> Hosted and deployed using Vercel</li>
-      <li><strong>Source Code:</strong> Available on GitHub</li>
-    </ul>
-  `,
   },
 ];
