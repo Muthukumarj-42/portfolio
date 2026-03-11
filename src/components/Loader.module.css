@@ -1,0 +1,235 @@
+.loaderContainer {
+  position: fixed;
+  inset: 0;
+  background-color: #03050a; /* Deep tech dark */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000;
+  overflow: hidden;
+}
+
+/* Grid Background */
+.gridBackground {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(0, 234, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 234, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Circuits Layer */
+.circuitWrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circuitSvg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.trace {
+  fill: none;
+  stroke: url(#glowGradient);
+  stroke-width: 2;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 8px rgba(0, 234, 255, 0.8));
+  animation: drawCircuit 2s ease-in-out forwards;
+}
+
+.node {
+  fill: #00eaff;
+  opacity: 0;
+  filter: drop-shadow(0 0 10px #00eaff);
+  animation: pulseNode 2s infinite alternate ease-in-out forwards;
+}
+
+@keyframes drawCircuit {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes pulseNode {
+  0% { opacity: 0; transform: scale(0.5); }
+  20% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0.6; transform: scale(1); }
+}
+
+/* Centered Content layer */
+.contentCenter {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Terminal display */
+.terminal {
+  background: rgba(10, 15, 25, 0.8);
+  border: 1px solid rgba(0, 234, 255, 0.2);
+  border-radius: 8px;
+  padding: 24px 32px;
+  box-shadow: 0 0 30px rgba(0, 234, 255, 0.1);
+  backdrop-filter: blur(10px);
+  min-width: 320px;
+}
+
+.terminal pre {
+  color: #00eaff;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: left;
+  margin: 0 0 20px 0;
+  text-shadow: 0 0 8px rgba(0, 234, 255, 0.5);
+  min-height: 100px;
+}
+
+.progressBarWrapper {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progressBar {
+  height: 100%;
+  background: linear-gradient(90deg, #00eaff, #8a2be2);
+  width: 0%;
+  animation: fillProgress 1.6s ease-in-out forwards;
+  box-shadow: 0 0 10px #00eaff;
+}
+
+@keyframes fillProgress {
+  0% { width: 0%; }
+  30% { width: 40%; }
+  60% { width: 60%; }
+  100% { width: 100%; }
+}
+
+/* Motherboard Chip */
+.processorChip {
+  width: 120px;
+  height: 120px;
+  background: #111;
+  border: 2px solid #333;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 0 40px rgba(0, 234, 255, 0.3), inset 0 0 20px rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.processorChip::before {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgba(0, 234, 255, 0.4);
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 4px,
+    rgba(0, 234, 255, 0.05) 4px,
+    rgba(0, 234, 255, 0.05) 8px
+  );
+}
+
+.chipPins, .chipPinsRight {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  width: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chipPins { left: -10px; }
+.chipPinsRight { right: -10px; }
+
+.chipPins::before, .chipPinsRight::before {
+  content: '';
+  box-shadow: 0 15px 0 #555, 0 30px 0 #555, 0 45px 0 #555, 0 60px 0 #555, 0 75px 0 #555, 0 90px 0 #555;
+  width: 8px;
+  height: 4px;
+  background: #555;
+  display: block;
+}
+
+/* Final Logo State */
+.logoContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.glowPulse {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(0, 234, 255, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: logoPulse 2s infinite alternate ease-in-out;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.logoImage {
+  width: 100px;
+  height: auto;
+  margin-bottom: 24px;
+  filter: drop-shadow(0 0 15px rgba(0, 234, 255, 0.4));
+}
+
+.brandText {
+  color: white;
+}
+
+.brandText h1 {
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  margin: 0 0 8px 0;
+  font-weight: 800;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.brandText p {
+  font-size: 1rem;
+  color: #00eaff;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+@keyframes logoPulse {
+  from { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+  to { transform: translate(-50%, -50%) scale(1.5); opacity: 1; }
+}

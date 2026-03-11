@@ -6,13 +6,24 @@ import Projects from "./components/Projects";
 import Certificates from "./pages/Certificates";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Loader from "./components/Loader";
+import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
 export default function App() {
+  const [loading, setLoading] = useState(true);
+
   return (
     <>
-      <Header />
+      <AnimatePresence>
+        {loading && <Loader onComplete={() => setLoading(false)} />}
+      </AnimatePresence>
 
-      <section id="home">
+      {!loading && (
+        <>
+          <Header />
+
+          <section id="home">
         <Hero />
       </section>
 
@@ -32,10 +43,12 @@ export default function App() {
         <Certificates />
       </section>
 
-      <section id="contact">
-        <Contact />
-      </section>
-      <Footer />
+          <section id="contact">
+            <Contact />
+          </section>
+          <Footer />
+        </>
+      )}
     </>
   );
 }
